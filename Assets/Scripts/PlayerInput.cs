@@ -11,7 +11,7 @@ public class PlayerInput : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if (MoveRight != null && Input.GetAxis("Horizontal") > 0) MoveRight();
-        if (MoveLeft != null && Input.GetAxis("Horizontal") < 0) MoveLeft();
+        if (MoveRight != null && Input.GetAxisRaw("Horizontal") > 0) MoveRight();
+        if (MoveLeft != null && Input.GetAxisRaw("Horizontal") < 0) MoveLeft();
 	}
 }
