@@ -5,26 +5,41 @@ public class HingeMotorControl : MonoBehaviour {
 
     private JointMotor motor;
     private HingeJoint hinge;
+    private Rigidbody rb;
 
 	void Start () 
     {
         hinge = GetComponent<HingeJoint>();
+        rb = GetComponent<Rigidbody>();
         motor = hinge.motor;
-       // motor.targetVelocity = 0;
-        hinge.motor = motor;
 	}
 
 
     void SpinAntiClockwise()
     {
+        if (rb.velocity == new Vector3(0, 0, 0))
+        {
+            rb.isKinematic = true;
+            rb.isKinematic = false;
+        }
         motor.targetVelocity = 100f;
+        motor.freeSpin = false;
+        motor.force = 200;
         hinge.motor = motor;
-        hinge.useMotor = true;
+        hinge.useMotor = false;
     }
 
     void SpinClockwise()
     {
+        if (rb.velocity == new Vector3(0, 0, 0))
+        {
+            rb.isKinematic = true;
+            rb.isKinematic = false;
+        }
+        rb.AddForce(Vector3.zero);
         motor.targetVelocity = -100f;
+        motor.freeSpin = false;
+        motor.force = 200;
         hinge.motor = motor;
         hinge.useMotor = true;
     }
