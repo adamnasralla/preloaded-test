@@ -326,7 +326,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 3, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 6, z: 14.8900003}
+  m_ConnectedAnchor: {x: 0, y: 6, z: 31.3299999}
   m_UseSpring: 0
   m_Spring:
     spring: 100
@@ -413,7 +413,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1183730209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 14.8900003}
+  m_LocalPosition: {x: 0, y: 0, z: 31.3299999}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -426,9 +426,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1183730209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: add13497327529b47890d49f54f17942, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e0a3d34834beff4f88f5a0e0dd0ccec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPrefab: {fileID: 131814, guid: f4aa05274e85cbb42836e3f58317e241, type: 2}
 --- !u!1 &1469818187
 GameObject:
   m_ObjectHideFlags: 0

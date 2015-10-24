@@ -17,7 +17,6 @@ public class AIInput : MonoBehaviour {
 
     void changeDirection()
     {
-        Debug.Log(currentDirection);
         currentDirection = Random.Range(0, 3);
     }
 }
