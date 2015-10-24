@@ -9,10 +9,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 436068}
   - 33: {fileID: 3376228}
-  - 136: {fileID: 13698942}
   - 23: {fileID: 2318234}
   - 54: {fileID: 5406502}
+  - 65: {fileID: 6588518}
   - 114: {fileID: 11409598}
+  - 114: {fileID: 11447374}
+  - 114: {fileID: 11485646}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -78,6 +80,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6588518
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.00000012, y: 1.99999964, z: 1.00000012}
+  m_Center: {x: 5.96046448e-08, y: 0, z: -8.9406953e-08}
 --- !u!114 &11409598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,19 +106,29 @@ MonoBehaviour:
   xSpin: 0
   ySpin: 5
   zSpin: 0
---- !u!136 &13698942
-CapsuleCollider:
+--- !u!114 &11447374
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131814}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bdf902b53a312f499ffbd2f40dd3b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Z_MIN: -10
+--- !u!114 &11485646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a3511b06c0d0b499fadacd7095795a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
