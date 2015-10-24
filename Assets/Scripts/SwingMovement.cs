@@ -15,6 +15,7 @@ public class SwingMovement : MonoBehaviour{
     {
         if (!hasMoved) StopSwinging();
         hasMoved = false;
+        
 	}
 
     public void SwingLeft()

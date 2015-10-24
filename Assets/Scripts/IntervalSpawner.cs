@@ -36,7 +36,6 @@ public class IntervalSpawner : MonoBehaviour {
             {
                 GameObject spawn = Instantiate(spawnPrefab);
                 spawn.transform.position = gameObject.transform.position;
-                spawn.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, -20);
                 yield return new WaitForSeconds(spawnGapTime);
             }
         }
