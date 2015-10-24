@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour {
 
 	void Update () 
     {
+        Time.timeScale += 0.0003f;
         float horizontalAxis = Input.GetAxisRaw("Horizontal");
         if (horizontalAxis > 0) moveEventDispatcher.FireMoveRightEvent();
         if (horizontalAxis < 0) moveEventDispatcher.FireMoveLeftEvent();

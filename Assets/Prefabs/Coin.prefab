@@ -15,9 +15,9 @@ GameObject:
   - 114: {fileID: 11409598}
   - 114: {fileID: 11447374}
   - 114: {fileID: 11485646}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

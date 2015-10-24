@@ -13,7 +13,11 @@ public class PickupControl : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider collider)
     {
-        eventDispatcher.FirePickupCollectedEvent();
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            eventDispatcher.FirePickupCollectedEvent();
+            Time.timeScale -= 0.01f;
+        }
         Destroy(gameObject);
     }
 

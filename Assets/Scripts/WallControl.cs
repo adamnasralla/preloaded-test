@@ -13,7 +13,10 @@ public class WallControl : MonoBehaviour {
 
     void OnTriggerEnter(Collider collider)
     {
-        eventDispatcher.FireWallHitEvent();
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            eventDispatcher.FireWallHitEvent();
+        }
         Destroy(gameObject);
     }
 }

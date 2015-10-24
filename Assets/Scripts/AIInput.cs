@@ -9,6 +9,7 @@ public class AIInput : MonoBehaviour {
 
     void Update()
     {
+        
         if (Random.Range(0, 1.0f) < 0.02f) changeDirection();
 
         if (currentDirection == 1) moveEventDispatcher.FireMoveRightEvent();

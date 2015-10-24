@@ -26,9 +26,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 489788}
   - 33: {fileID: 3379108}
-  - 65: {fileID: 6521326}
   - 23: {fileID: 2314290}
   - 114: {fileID: 11428638}
+  - 64: {fileID: 6413268}
   m_Layer: 8
   m_Name: WallSegment
   m_TagString: Untagged
@@ -55,9 +55,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: -6, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: .5}
+  m_LocalScale: {x: .150000006, y: .150000006, z: .150000006}
   m_Children: []
   m_Father: {fileID: 427032}
   m_RootOrder: 0
@@ -91,7 +91,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180006}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: ecbec3c04d7da224dbfac4d7cadb925b, type: 3}
 --- !u!54 &5435718
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -107,18 +107,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6521326
-BoxCollider:
+--- !u!64 &6413268
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180006}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: ecbec3c04d7da224dbfac4d7cadb925b, type: 3}
 --- !u!114 &11428638
 MonoBehaviour:
   m_ObjectHideFlags: 1
