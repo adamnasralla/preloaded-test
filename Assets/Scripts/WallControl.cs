@@ -1,20 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PickupControl : MonoBehaviour {
+public class WallControl : MonoBehaviour {
 
     CollisionEventDispatcher eventDispatcher;
 
-	void Start () 
+    void Start()
     {
         GameObject gameControl = GameObject.FindGameObjectWithTag("GameController");
         eventDispatcher = gameControl.GetComponent<CollisionEventDispatcher>();
-	}
-	
-	void OnTriggerEnter(Collider collider)
-    {
-        eventDispatcher.FirePickupCollectedEvent();
-        Destroy(gameObject);
     }
 
+    void OnTriggerEnter(Collider collider)
+    {
+        eventDispatcher.FireWallHitEvent();
+        Destroy(gameObject);
+    }
 }

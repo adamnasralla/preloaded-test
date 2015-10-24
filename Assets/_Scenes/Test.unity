@@ -755,6 +755,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1639160698}
   - 114: {fileID: 1639160700}
+  - 114: {fileID: 1639160697}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -762,6 +763,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1639160697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1639160696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb570b2d27a7895448822f41ac8184bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventDispatcher: {fileID: 1639160700}
 --- !u!4 &1639160698
 Transform:
   m_ObjectHideFlags: 0
@@ -1025,7 +1038,7 @@ GameObject:
   - 114: {fileID: 1742756874}
   - 114: {fileID: 1742756875}
   - 114: {fileID: 1742756876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerSwinger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ScoreControl : MonoBehaviour {
 
-    public PickupEventDispatcher eventDispatcher;
+    public CollisionEventDispatcher eventDispatcher;
     public ScoreTextControl scoreText;
     private int score;
 

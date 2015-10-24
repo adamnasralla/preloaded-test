@@ -17,7 +17,7 @@ public class WallSpawner : MonoBehaviour {
             angle1 += 32.6f;
             GameObject wall = Instantiate(wallPrefab);
             wall.transform.Rotate(new Vector3(0, 0, angle1));
-            wall.transform.position = new Vector3(wall.transform.position.x, wall.transform.position.y+6f, transform.position.z);
+            wall.transform.position = new Vector3(wall.transform.position.x, wall.transform.position.y + 6f, transform.position.z);
         }
 
         angle1 = angle - 20;
