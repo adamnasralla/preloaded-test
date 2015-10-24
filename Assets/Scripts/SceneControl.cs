@@ -17,4 +17,9 @@ public class SceneControl : MonoBehaviour {
     {
         Application.LoadLevel(1);
     }
+
+    public void BackToMenu()
+    {
+        Application.LoadLevel(0);
+    }
 }
