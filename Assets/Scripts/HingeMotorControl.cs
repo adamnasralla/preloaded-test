@@ -5,108 +5,50 @@ public class HingeMotorControl : MonoBehaviour {
 
     private JointMotor motor;
     private HingeJoint hinge;
-    private Rigidbody rb;
-    private bool didSpin = false;
+    private Rigidbody rigidbody;
 
-	void Start () 
+	void Awake () 
     {
         hinge = GetComponent<HingeJoint>();
-        rb = GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
         motor = hinge.motor;
 	}
 
-    void Update()
+    public void SetTargetVelocity(float targetVelocity)
     {
-        if (!didSpin) hinge.useMotor = false;
-        didSpin = false;
-    }
-
-
-    void SpinAntiClockwise()
-    {
-
-        if (rb.velocity == new Vector3(0, 0, 0))
-        {
-            rb.isKinematic = true;
-            rb.isKinematic = false;
-        }
-
-        motor.targetVelocity = -1000f;
+        RefreshStationaryRigidbody();
+        motor.targetVelocity = targetVelocity;
         
-
-        if (hinge.useMotor)
-        {
-            if (hinge.angle < -81)
-            {
-                hinge.useMotor = false;
-            }
-        }
-        else
-        {
-            if (hinge.angle > -80)
-            {
-                hinge.useMotor = true;
-            }
-        }
-        
-        if (hinge.angle > 81)
-        {
-            hinge.useMotor = false;
-        }
-
+        hinge.useMotor = true;
         hinge.motor = motor;
-
-        didSpin = true;
     }
 
-    void SpinClockwise()
+    public void SetIsOn(bool isOn)
     {
-
-        Debug.Log("Clock");
-        if (rb.velocity == new Vector3(0, 0, 0))
-        {
-            rb.isKinematic = true;
-            rb.isKinematic = false;
-        }
-        motor.targetVelocity = 1000f;
-        
-        if (hinge.useMotor)
-        {
-            if (hinge.angle > 81)
-            {
-                hinge.useMotor = false;
-            }
-        }
-        else
-        {
-            if (hinge.angle < 80)
-            {
-                hinge.useMotor = true;
-            }
-        }
-        
-        if (hinge.angle < -81)
-        {
-            hinge.useMotor = false;
-        }
-
-
-        hinge.motor = motor;
-        didSpin = true;
+        RefreshStationaryRigidbody();
+        hinge.useMotor = isOn;
     }
 
-    //Setup Event Listeners
-    void OnEnable()
+    public float GetAngle()
     {
-        
-        PlayerInput.MoveRight += SpinAntiClockwise;
-        PlayerInput.MoveLeft += SpinClockwise;
+        return hinge.angle;
     }
 
-    void OnDisable()
+    public bool GetIsOn()
     {
-        PlayerInput.MoveRight -= SpinAntiClockwise;
-        PlayerInput.MoveLeft -= SpinClockwise;
+        return hinge.useMotor;
     }
+
+
+    //Fixes a Unity Engine bug where hinge motor does not respond if rigidbody is stationary!
+    private void RefreshStationaryRigidbody()
+    {
+        if (rigidbody.velocity == new Vector3(0, 0, 0))
+        {
+            rigidbody.isKinematic = true;
+            rigidbody.isKinematic = false;
+        }
+    }
+
 	
 }

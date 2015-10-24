@@ -246,8 +246,10 @@ GameObject:
   - 59: {fileID: 1742756872}
   - 114: {fileID: 1742756874}
   - 114: {fileID: 1742756873}
+  - 114: {fileID: 1742756875}
+  - 114: {fileID: 1742756876}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +334,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 0}
   m_Anchor: {x: 0, y: 3, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
-  m_AutoConfigureConnectedAnchor: 0
+  m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 6, z: 0}
   m_UseSpring: 0
   m_Spring:
@@ -377,3 +379,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69882246fdcdef8438cf115dccca88c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1742756875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742756866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eed1cac76ac9644c9a355bb09efee37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1742756876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1742756866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0269c5f49c3a784428a3a89b5ec1643f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swingMovement: {fileID: 1742756875}
