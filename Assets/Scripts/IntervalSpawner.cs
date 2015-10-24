@@ -3,6 +3,15 @@ using System.Collections;
 
 public class IntervalSpawner : MonoBehaviour {
 
+    public float minSpawnGap = 0.1f;
+    public float maxSpawnGap = 0.4f;
+
+    public int minSpawnLength = 5;
+    public int maxSpawnLength = 20;
+
+    public float minWaitTime = 1;
+    public float maxWaitTime = 3;
+
     private int spawnCount;
     private float spawnGapTime;
     private float timeTillNextSpawn;
@@ -19,10 +28,10 @@ public class IntervalSpawner : MonoBehaviour {
     {
         while (true)
         {
-            timeTillNextSpawn = Random.Range(1.0f, 3.0f);
+            timeTillNextSpawn = Random.Range(minWaitTime, maxWaitTime);
             yield return new WaitForSeconds(timeTillNextSpawn);
-            spawnCount = Random.Range(5, 20);
-            spawnGapTime = Random.Range(0.1f, 0.4f);
+            spawnCount = Random.Range(minSpawnLength, maxSpawnLength);
+            spawnGapTime = Random.Range(minSpawnGap, maxSpawnGap);
             for (int i = 0; i < spawnCount; i++)
             {
                 GameObject spawn = Instantiate(spawnPrefab);
