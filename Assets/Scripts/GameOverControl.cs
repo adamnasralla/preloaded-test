@@ -7,7 +7,7 @@ public class GameOverControl : MonoBehaviour {
 
     void GameOver()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        Application.LoadLevel(0);
     }
 
     void OnEnable()
