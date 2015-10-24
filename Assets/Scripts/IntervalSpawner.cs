@@ -21,8 +21,8 @@ public class IntervalSpawner : MonoBehaviour {
         {
             timeTillNextSpawn = Random.Range(1.0f, 3.0f);
             yield return new WaitForSeconds(timeTillNextSpawn);
-            spawnCount = Random.Range(1, 20);
-            spawnGapTime = Random.Range(0.05f, 0.2f);
+            spawnCount = Random.Range(5, 20);
+            spawnGapTime = Random.Range(0.2f, 0.5f);
             for (int i = 0; i < spawnCount; i++)
             {
                 GameObject spawn = Instantiate(spawnPrefab);
