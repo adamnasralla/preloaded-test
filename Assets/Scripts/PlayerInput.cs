@@ -3,15 +3,12 @@ using System.Collections;
 
 public class PlayerInput : MonoBehaviour {
 
-    public delegate void MoveAction();
-
-    public static event MoveAction MoveRight;
-    public static event MoveAction MoveLeft;
+    public MoveEventDispatcher moveEventDispatcher;
 
 	void Update () 
     {
         float horizontalAxis = Input.GetAxisRaw("Horizontal");
-        if (MoveRight != null && horizontalAxis > 0) MoveRight();
-        if (MoveLeft != null && horizontalAxis < 0) MoveLeft();
+        if (horizontalAxis > 0) moveEventDispatcher.FireMoveRightEvent();
+        if (horizontalAxis < 0) moveEventDispatcher.FireMoveLeftEvent();
 	}
 }

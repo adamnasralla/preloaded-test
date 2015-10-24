@@ -9,14 +9,7 @@ public class SwingMovement : MonoBehaviour{
     private const float SWING_ANGLE_RANGE_IF_OFF = 80;
     private const float SWING_ANGLE_RANGE_IF_ON = 81; 
 
-    private HingeMotorControl motor;
-
-	void Start () 
-    {
-        motor = GetComponent<HingeMotorControl>();
-	}
-
-
+    public HingeMotorControl motor;
 
 	void Update () 
     {
@@ -38,7 +31,7 @@ public class SwingMovement : MonoBehaviour{
         if (IsInSwingRange())
         {
             motor.SetTargetVelocity(-TARGET_VELOCITY);
-            hasMoved = false;
+            hasMoved = true;
         }
     }
 
