@@ -25,7 +25,7 @@ public class TimeControl : MonoBehaviour {
 
     void SpeedDown()
     {
-        Time.timeScale -= 0.05f;
+        Time.timeScale -= Time.timeScale * 0.05f;
     }
 
     void OnEnable()

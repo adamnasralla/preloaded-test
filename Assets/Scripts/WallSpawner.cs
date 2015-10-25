@@ -33,7 +33,7 @@ public class WallSpawner : MonoBehaviour {
 	}
 	
 
-	void Update () 
+	void FixedUpdate () 
     {
         frameCount++;
         if (frameCount == 100)
