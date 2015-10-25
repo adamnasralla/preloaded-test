@@ -5,7 +5,7 @@ public class GameOverControl : MonoBehaviour {
 
     public void GameOver()
     {
-        Application.LoadLevel(2);
+        Application.LoadLevel("End");
     }
 
 }

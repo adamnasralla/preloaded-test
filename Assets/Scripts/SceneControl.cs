@@ -15,11 +15,16 @@ public class SceneControl : MonoBehaviour {
 
     public void StartGame()
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel("Game");
     }
 
     public void BackToMenu()
     {
-        Application.LoadLevel(0);
+        Application.LoadLevel("Start");
+    }
+
+    public void GotoInfo()
+    {
+        Application.LoadLevel("Info");
     }
 }
