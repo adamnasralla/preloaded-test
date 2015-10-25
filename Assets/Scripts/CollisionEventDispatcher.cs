@@ -5,14 +5,32 @@ public class CollisionEventDispatcher : MonoBehaviour {
 
     public delegate void CollisionEvent();
 
-    public event CollisionEvent PickupCollected;
+    public event CollisionEvent SpinDownCollected;
+    public event CollisionEvent SpinUpCollected;
+    public event CollisionEvent ProtonCollected;
     public event CollisionEvent WallHit;
 
-    public void FirePickupCollectedEvent()
+    public void FireSpinUpCollectedEvent()
     {
-        if (PickupCollected != null)
+        if (SpinUpCollected != null)
         {
-            PickupCollected();
+            SpinUpCollected();
+        }
+    }
+
+    public void FireSpinDownCollectedEvent()
+    {
+        if (SpinDownCollected != null)
+        {
+            SpinDownCollected();
+        }
+    }
+
+    public void FireProtonCollectedEvent()
+    {
+        if (ProtonCollected != null)
+        {
+            ProtonCollected();
         }
     }
 

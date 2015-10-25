@@ -7,7 +7,7 @@ public class AIInput : MonoBehaviour {
 
     private int currentDirection = 0;
 
-    void Update()
+    void FixedUpdate()
     {
         
         if (Random.Range(0, 1.0f) < 0.02f) changeDirection();

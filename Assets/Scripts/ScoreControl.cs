@@ -3,16 +3,18 @@ using System.Collections;
 
 public class ScoreControl : MonoBehaviour {
 
-    public CollisionEventDispatcher eventDispatcher;
     public ScoreTextControl scoreText;
     public static int score;
     public static int hiScore;
 
-
-    void PickupCollected()
+    void Start()
     {
-        score += 50;
-        scoreText.SetScore(score);
+        score = 0;
+    }
+
+    void Update()
+    {
+        addScore(1);
     }
 
     public void addScore(int scoreToAdd)
@@ -24,15 +26,7 @@ public class ScoreControl : MonoBehaviour {
     {
         score = newScore;
         if (score > hiScore) hiScore = score;
+        scoreText.SetScore(score);
     }
 
-    void OnEnable()
-    {
-        eventDispatcher.PickupCollected += PickupCollected;
-    }
-
-    void OnDisable()
-    {
-        eventDispatcher.PickupCollected -= PickupCollected;
-    }
 }

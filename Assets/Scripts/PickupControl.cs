@@ -3,6 +3,15 @@ using System.Collections;
 
 public class PickupControl : MonoBehaviour {
 
+    public enum PickupType
+    {
+        SPIN_UP,
+        SPIN_DOWN,
+        PROTON
+    }
+
+    public PickupType pickUpType;
+
     CollisionEventDispatcher eventDispatcher;
 
 	void Start () 
@@ -15,10 +24,11 @@ public class PickupControl : MonoBehaviour {
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            eventDispatcher.FirePickupCollectedEvent();
-            Time.timeScale -= 0.01f;
+            if (pickUpType == PickupType.SPIN_UP) eventDispatcher.FireSpinUpCollectedEvent();
+            if (pickUpType == PickupType.SPIN_DOWN) eventDispatcher.FireSpinDownCollectedEvent();
+            if (pickUpType == PickupType.PROTON) eventDispatcher.FireProtonCollectedEvent();
         }
-        Destroy(gameObject);
+        Destroy(gameObject);    //pick up also destroyed if collides with another pick up
     }
 
 }
