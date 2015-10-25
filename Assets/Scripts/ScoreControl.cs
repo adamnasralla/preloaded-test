@@ -6,15 +6,17 @@ public class ScoreControl : MonoBehaviour {
     public ScoreTextControl scoreText;
     public static int score;
     public static int hiScore;
-
+    private float timeAtStart;
     void Start()
     {
         score = 0;
+        timeAtStart = Time.realtimeSinceStartup;
     }
 
     void Update()
     {
-        addScore(1);
+        int time = Mathf.RoundToInt((Time.realtimeSinceStartup-timeAtStart) * 10);
+        setScore(time);
     }
 
     public void addScore(int scoreToAdd)
