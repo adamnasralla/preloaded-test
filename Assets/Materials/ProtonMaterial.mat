@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: CoinMaterial
+  m_Name: ProtonMaterial
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -141,11 +141,11 @@ Material:
       data:
         first:
           name: _EmissionColor
-        second: {r: .200000003, g: .194482759, b: 0, a: .200000003}
+        second: {r: 0, g: .194509804, b: 0, a: .200000003}
       data:
         first:
           name: _Color
-        second: {r: 1, g: .956862748, b: .0784313753, a: 1}
+        second: {r: 0, g: .956862748, b: .0784313753, a: 1}
       data:
         first:
           name: _SpecColor
@@ -153,4 +153,4 @@ Material:
       data:
         first:
           name: _EmissionColorUI
-        second: {r: 1, g: .972413778, b: 0, a: 1}
+        second: {r: 0, g: .972549021, b: 0, a: 1}

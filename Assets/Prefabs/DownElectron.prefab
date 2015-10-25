@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11447374}
   - 114: {fileID: 11485646}
   m_Layer: 10
-  m_Name: Coin
+  m_Name: DownElectron
   m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 07e753ea0c498ef4f985a7eaea8147ab, type: 2}
+  - {fileID: 2100000, guid: 700cfc2e4370db6479308acd71396f14, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

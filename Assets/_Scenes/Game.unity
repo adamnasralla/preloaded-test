@@ -19,7 +19,7 @@ RenderSettings:
   m_FogMode: 1
   m_FogDensity: .00999999978
   m_LinearFogStart: 0
-  m_LinearFogEnd: 150
+  m_LinearFogEnd: 120
   m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
@@ -367,7 +367,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 3, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 6, z: 158.199997}
+  m_ConnectedAnchor: {x: 0, y: 6, z: 125}
   m_UseSpring: 0
   m_Spring:
     spring: 100
@@ -476,7 +476,7 @@ MonoBehaviour:
   maxSpawnLength: 20
   minWaitTime: 1
   maxWaitTime: 3
-  spawnPrefab: {fileID: 131814, guid: f4aa05274e85cbb42836e3f58317e241, type: 2}
+  spawnPrefab: {fileID: 131814, guid: 300c6fbe38f14fc40bdc93c7d780213d, type: 2}
 --- !u!1 &700903434
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +698,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 137242, guid: b5b49d5f5bbe95e44be081390ea43e42, type: 2}
+      propertyPath: m_Name
+      value: WallSpawner
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5b49d5f5bbe95e44be081390ea43e42, type: 2}
   m_IsPrefabParent: 0
@@ -744,7 +748,7 @@ MonoBehaviour:
   maxSpawnLength: 20
   minWaitTime: 1
   maxWaitTime: 3
-  spawnPrefab: {fileID: 131814, guid: f4aa05274e85cbb42836e3f58317e241, type: 2}
+  spawnPrefab: {fileID: 131814, guid: a14f480c79c9a204c86e321886130daa, type: 2}
 --- !u!114 &917868612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,7 +818,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 3, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 6, z: 160.729996}
+  m_ConnectedAnchor: {x: 0, y: 6, z: 125}
   m_UseSpring: 0
   m_Spring:
     spring: 100
@@ -1064,7 +1068,6 @@ GameObject:
   - 114: {fileID: 1703789071}
   - 114: {fileID: 1703789082}
   - 114: {fileID: 1703789081}
-  - 114: {fileID: 1703789083}
   m_Layer: 11
   m_Name: CoinSwinger
   m_TagString: AI
@@ -1136,7 +1139,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 3, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 6, z: 156}
+  m_ConnectedAnchor: {x: 0, y: 6, z: 125}
   m_UseSpring: 0
   m_Spring:
     spring: 100
@@ -1251,24 +1254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveEventDispatcher: {fileID: 1703789081}
---- !u!114 &1703789083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1703789070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e0a3d34834beff4f88f5a0e0dd0ccec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minSpawnGap: 1
-  maxSpawnGap: 3
-  minSpawnLength: 1
-  maxSpawnLength: 5
-  minWaitTime: 2
-  maxWaitTime: 6
-  spawnPrefab: {fileID: 137242, guid: b5b49d5f5bbe95e44be081390ea43e42, type: 2}
 --- !u!1 &1742756866
 GameObject:
   m_ObjectHideFlags: 0
