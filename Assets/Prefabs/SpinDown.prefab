@@ -44,7 +44,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 700cfc2e4370db6479308acd71396f14, type: 2}
+  - {fileID: 2100000, guid: 07e753ea0c498ef4f985a7eaea8147ab, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: -20}
-  angularVelocity: {x: 0, y: -3, z: 0}
+  angularVelocity: {x: 0, y: 4, z: 0}
 --- !u!114 &11447374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a3511b06c0d0b499fadacd7095795a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpType: 0
+  pickUpType: 1
+  explosion: {fileID: 104752, guid: 1e1eef09ddb4d9c42a39b280c7ff0d7d, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

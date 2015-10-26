@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: -20}
-  angularVelocity: {x: 3, y: 0, z: 0}
+  angularVelocity: {x: 4, y: 0, z: 0}
 --- !u!114 &11447374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpType: 2
+  explosion: {fileID: 104752, guid: f450f150909b8d3498ef4aa798772481, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

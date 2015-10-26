@@ -11,7 +11,7 @@ public class PickupControl : MonoBehaviour {
     }
 
     public PickupType pickUpType;
-
+    public GameObject explosion;
     CollisionEventDispatcher eventDispatcher;
 
 	void Start () 
@@ -24,6 +24,8 @@ public class PickupControl : MonoBehaviour {
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            GameObject e = Instantiate(explosion);
+            e.transform.position = transform.position;
             if (pickUpType == PickupType.SPIN_UP) eventDispatcher.FireSpinUpCollectedEvent();
             if (pickUpType == PickupType.SPIN_DOWN) eventDispatcher.FireSpinDownCollectedEvent();
             if (pickUpType == PickupType.PROTON) eventDispatcher.FireProtonCollectedEvent();

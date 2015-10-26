@@ -622,7 +622,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436068, guid: 300c6fbe38f14fc40bdc93c7d780213d, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11409598, guid: 300c6fbe38f14fc40bdc93c7d780213d, type: 2}
       propertyPath: velocity.z
