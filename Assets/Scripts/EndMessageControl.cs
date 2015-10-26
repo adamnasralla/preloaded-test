@@ -4,14 +4,13 @@ using System.Collections;
 
 public class EndMessageControl : MonoBehaviour {
 
-    public Text scoreMessage;
+    public SecondsTextControl secondsText;
     public Text recordMessage;
 
 	// Use this for initialization
 	void Start () 
     {
-        scoreMessage.text = "You surfed for " + ScoreControl.GetSeconds() + ","
-            + ScoreControl.GetHundredths().ToString("00") + " earth seconds";
+        secondsText.SetDisplay(ScoreControl.score);
         recordMessage.enabled = ScoreControl.IsNewRecord();
 	}
 	

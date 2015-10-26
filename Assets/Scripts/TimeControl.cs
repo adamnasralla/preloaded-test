@@ -17,7 +17,6 @@ public class TimeControl : MonoBehaviour {
     {
         Time.timeScale += deltaT;
         deltaT += 0.0000001f;
-        Debug.Log(deltaT);
         timeDisplay.SetValue(Time.timeScale - 0.5f);
 	}
 

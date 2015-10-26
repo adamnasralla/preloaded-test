@@ -4,6 +4,7 @@ using System.Collections;
 public class ScoreControl : MonoBehaviour {
 
     public SecondsTextControl secondsText;
+    public SecondsTextControl recordText;
     public static int score;
     public static int hiScore;
     public static bool newRecord;
@@ -11,8 +12,10 @@ public class ScoreControl : MonoBehaviour {
 
     void Start()
     {
+        Debug.Log("START");
         score = 0;
         newRecord = false;
+        recordText.SetDisplay(hiScore);
         timeAtStart = Time.realtimeSinceStartup;
     }
 
