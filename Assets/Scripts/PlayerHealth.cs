@@ -26,13 +26,14 @@ public class PlayerHealth : MonoBehaviour {
             gameOverControl.GameOver();
         }
         healthBar.SetValue(health);
+        healthBar.FlashDown();
     }
 
     void ProtonCollected()
     {
         health += 1.5f;
         healthBar.SetValue(health);
-
+        healthBar.FlashUp();
     }
 
     void OnEnable()

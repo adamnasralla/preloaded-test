@@ -6,8 +6,8 @@ public class DisplayBarControl : MonoBehaviour {
 
     public RectTransform bar;
     public Image barImage;
-    public Image downArrow;
-    public Image upArrow;
+    public FlashFade downArrow;
+    public FlashFade upArrow;
     public Color upColor;
     public Color midColor;
     public Color downColor;
@@ -23,12 +23,12 @@ public class DisplayBarControl : MonoBehaviour {
 
     public void FlashUp()
     {
-
+        upArrow.Flash();
     }
 
     public void FlashDown()
     {
-
+        downArrow.Flash();
     }
 	
     private void UpdateWidth(float value)

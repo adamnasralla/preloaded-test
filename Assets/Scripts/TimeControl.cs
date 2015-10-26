@@ -24,11 +24,13 @@ public class TimeControl : MonoBehaviour {
     void SpeedUp()
     {
         Time.timeScale += 0.1f;
+        timeDisplay.FlashUp();
     }
 
     void SpeedDown()
     {
         Time.timeScale -= Time.timeScale * 0.05f;
+        timeDisplay.FlashDown();
     }
 
     void OnEnable()
