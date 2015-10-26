@@ -4,18 +4,21 @@ using System.Collections;
 public class TimeControl : MonoBehaviour {
 
     public CollisionEventDispatcher eventDispatcher;
-    public ScoreTextControl timeText;
+    public DisplayBarControl timeDisplay;
+    private float deltaT;
 
 	void Start () 
     {
+        deltaT = 0.001f;
         Time.timeScale = 1;
 	}
 	
 	void Update () 
     {
-        Time.timeScale += 0.00075f;
-        int timeS = Mathf.RoundToInt(Time.timeScale * 100f);
-        timeText.SetScore(timeS);
+        Time.timeScale += deltaT;
+        deltaT += 0.0000001f;
+        Debug.Log(deltaT);
+        timeDisplay.SetValue(Time.timeScale - 0.5f);
 	}
 
     void SpeedUp()

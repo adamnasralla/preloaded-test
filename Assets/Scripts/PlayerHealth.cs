@@ -3,9 +3,9 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-    int health;
+    private float health;
     public GameOverControl gameOverControl;
-    public ScoreTextControl healthText;
+    public DisplayBarControl healthBar;
     public CollisionEventDispatcher eventDispatcher;
 
 
@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Start () 
     {
         health = 100;
-        healthText.SetScore(health);
+        healthBar.SetValue(health);
 	}
 
     void WallHit()
@@ -25,13 +25,14 @@ public class PlayerHealth : MonoBehaviour {
             health = 0;
             gameOverControl.GameOver();
         }
-        healthText.SetScore(health);
+        healthBar.SetValue(health);
     }
 
     void ProtonCollected()
     {
-        health += 1;
-        healthText.SetScore(health);
+        health += 1.5f;
+        healthBar.SetValue(health);
+
     }
 
     void OnEnable()
