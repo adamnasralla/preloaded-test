@@ -18,7 +18,7 @@ public class ScoreControl : MonoBehaviour {
 
     void Update()
     {
-        int time = Mathf.RoundToInt((Time.realtimeSinceStartup-timeAtStart) * 10);
+        int time = Mathf.RoundToInt((Time.realtimeSinceStartup-timeAtStart) * 100);
         setScore(time);
     }
 

@@ -11,7 +11,7 @@ public class EndMessageControl : MonoBehaviour {
 	void Start () 
     {
         scoreMessage.text = "You surfed for " + ScoreControl.GetSeconds() + ","
-            + ScoreControl.GetHundredths() + " earth seconds";
+            + ScoreControl.GetHundredths().ToString("00") + " earth seconds";
         recordMessage.enabled = ScoreControl.IsNewRecord();
 	}
 	

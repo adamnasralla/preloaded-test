@@ -4,6 +4,7 @@ using System.Collections;
 public class WallControl : MonoBehaviour {
 
     CollisionEventDispatcher eventDispatcher;
+    public GameObject explosion;
 
     void Start()
     {
@@ -15,6 +16,8 @@ public class WallControl : MonoBehaviour {
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            GameObject e = Instantiate(explosion);
+            e.transform.position = transform.position;
             eventDispatcher.FireWallHitEvent();
         }
         Destroy(gameObject);
