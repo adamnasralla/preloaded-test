@@ -12,7 +12,6 @@ public class ScoreControl : MonoBehaviour {
 
     void Start()
     {
-        Debug.Log("START");
         score = 0;
         newRecord = false;
         recordText.SetDisplay(hiScore);
@@ -39,16 +38,6 @@ public class ScoreControl : MonoBehaviour {
             newRecord = true;
         }
         secondsText.SetDisplay(score);
-    }
-
-    public static int GetSeconds()
-    {
-        return score / 100;
-    }
-
-    public static int GetHundredths()
-    {
-        return score % 100;
     }
 
     public static bool IsNewRecord()

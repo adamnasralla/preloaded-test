@@ -3,14 +3,33 @@ using System.Collections;
 
 public class SceneControl : MonoBehaviour {
 
+    private static bool isFirstTime = true;
+
 	void Start () 
     {
         Time.timeScale = 1;
 	}
 
+    void Update()
+    {
+
+        if (Input.anyKey)
+        {
+            StartGame();
+        }
+
+    }
+
     public void StartGame()
     {
-        Application.LoadLevel("Game");
+        if (isFirstTime)
+        {
+            GotoInfo();
+        }
+        else
+        {
+            Application.LoadLevel("Game");
+        }
     }
 
     public void BackToMenu()
@@ -20,6 +39,7 @@ public class SceneControl : MonoBehaviour {
 
     public void GotoInfo()
     {
+        isFirstTime = false;
         Application.LoadLevel("Info");
     }
 }

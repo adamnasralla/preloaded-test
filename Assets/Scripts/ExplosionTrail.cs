@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ExplosionControl : MonoBehaviour
+public class ExplosionTrail : MonoBehaviour
 {
     
     public GameObject trail;
