@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ScoreControl : MonoBehaviour {
 
-    public ScoreTextControl scoreText;
+    public SecondsTextControl secondsText;
     public static int score;
     public static int hiScore;
     public static bool newRecord;
@@ -35,7 +35,7 @@ public class ScoreControl : MonoBehaviour {
             hiScore = score;
             newRecord = true;
         }
-        scoreText.SetScore(score);
+        secondsText.SetDisplay(score);
     }
 
     public static int GetSeconds()
