@@ -13,7 +13,7 @@ public class SceneControl : MonoBehaviour {
     void Update()
     {
 
-        if (Input.anyKey)
+        if (Input.GetKeyDown("space"))
         {
             StartGame();
         }

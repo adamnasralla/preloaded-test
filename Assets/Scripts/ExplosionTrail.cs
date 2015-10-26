@@ -16,7 +16,6 @@ public class ExplosionTrail : MonoBehaviour
         InitializeIfNeeded();
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
        
@@ -36,7 +35,6 @@ public class ExplosionTrail : MonoBehaviour
         }
         else
         {
-            //Debug.Log("First");
             int noParticles = pSystem.GetParticles(particles);
             for (int i = 0; i < noParticles; i++)
             {
