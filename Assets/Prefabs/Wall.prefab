@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 427032}
   - 114: {fileID: 11448610}
   - 54: {fileID: 5435718}
+  - 114: {fileID: 11482480}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -29,7 +30,6 @@ GameObject:
   - 23: {fileID: 2314290}
   - 114: {fileID: 11428638}
   - 64: {fileID: 6413268}
-  - 114: {fileID: 11464902}
   m_Layer: 8
   m_Name: WallSegment
   m_TagString: Untagged
@@ -145,12 +145,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: -20}
   angularVelocity: {x: 0, y: 0, z: 0}
---- !u!114 &11464902
+--- !u!114 &11482480
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 180006}
+  m_GameObject: {fileID: 154546}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bdf902b53a312f499ffbd2f40dd3b6c, type: 3}

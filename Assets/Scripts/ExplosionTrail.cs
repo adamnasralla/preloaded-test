@@ -14,6 +14,7 @@ public class ExplosionTrail : MonoBehaviour
     void Start()
     {
         InitializeIfNeeded();
+        StartCoroutine(DestroySelf());
     }
 
     void LateUpdate()
@@ -40,7 +41,7 @@ public class ExplosionTrail : MonoBehaviour
             {
                 trails[i].transform.localPosition = particles[i].position;
                 Color c = particles[i].color;
-                c.a = particles[i].lifetime / particles[i].startLifetime;
+                c.a = particles[i].remainingLifetime / particles[i].startLifetime;
                 trails[i].GetComponent<TrailRenderer>().material.SetColor("_TintColor", c );
             }
         }
@@ -54,5 +55,11 @@ public class ExplosionTrail : MonoBehaviour
 
         if (particles == null || particles.Length < pSystem.maxParticles)
             particles = new ParticleSystem.Particle[pSystem.maxParticles];
+    }
+
+    IEnumerator DestroySelf()
+    {
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
     }
 }

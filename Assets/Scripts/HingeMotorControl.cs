@@ -17,11 +17,13 @@ public class HingeMotorControl : MonoBehaviour {
     public void SetTargetVelocity(float targetVelocity)
     {
         RefreshStationaryRigidbody();
-        motor.targetVelocity = targetVelocity;
-        
+        FixNegativeVelocityBug(targetVelocity);
+
         hinge.useMotor = true;
         hinge.motor = motor;
     }
+
+
 
     public void SetIsOn(bool isOn)
     {
@@ -50,5 +52,20 @@ public class HingeMotorControl : MonoBehaviour {
         }
     }
 
-	
+    //Unity update does not allow negative values in motor z axis must be flipped
+    public void FixNegativeVelocityBug(float targetVelocity)
+    {
+        if (targetVelocity < 0)
+        {
+            targetVelocity *= -1;
+            hinge.axis = new Vector3(0, 0, 1);
+        }
+        else if (targetVelocity > 0)
+        {
+            hinge.axis = new Vector3(0, 0, -1);
+        }
+        motor.targetVelocity = targetVelocity;
+    }
+
+
 }
